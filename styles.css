@@ -1,0 +1,175 @@
+body {
+    background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif');
+    background-repeat: repeat;
+    font-family: Comic Sans MS, Papyrus, cursive;
+    color: lime;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+
+header {
+    background-color: rgba(255, 0, 60, 0.5);
+    padding: 20px;
+    font-size: 36px;
+    text-shadow: 2px 2px #ff00ff;
+    border: 5px solid lime;
+    box-shadow: 5px 5px 0px black;
+  }
+
+  h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px #ff00ff;
+    animation: rainbow 2s infinite;
+  }
+
+  @keyframes rainbow {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+  }
+
+  .h1:hover{
+    animation: scale 0.5s infinite;
+  }
+
+  .marquee {
+    font-size: 24px;
+    color: cyan;
+  }
+
+  .meme-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 20px;
+  }
+  .meme-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px black;
+  }
+
+  @media screen and (min-width: 744px) {
+    .meme-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    header{
+        background-color: rgba(4, 0, 255, 0.5);
+    }
+}
+    @media screen and (min-width: 1244px) {
+        .meme-grid {
+        grid-template-columns: repeat(3, 1fr);
+        }
+        header{
+            background-color: rgba(255, 0, 255, 0.5);
+        }
+    }
+   
+  .meme {
+    border: 5px solid magenta;
+    border-radius: 10px;
+    margin: 20px;
+    display: inline-block;
+    background: white;
+    padding: 10px;
+    box-shadow: 5px 5px 0px black;
+  }
+
+  .meme:hover {
+    animation: scale 0.5s ease-in-out;
+  }
+
+  @keyframes scale{
+    0% { transform: scale(1); }
+    100% { transform: scale(4); }
+  }
+
+  .popup {
+    position: fixed;
+    width: 200px;
+    padding: 10px;
+    background-color: fuchsia;
+    border: 5px double yellow;
+    z-index: 1;
+    font-weight: bold;
+  }
+
+  .popup:hover {
+    animation: shake 0.5s linear infinite;
+  }
+
+  .popup button {
+    margin-top: 15px;
+    font-size: 16px;
+    background: lime;
+  }
+  .popup button:hover {
+    background: yellow;
+    color: black;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+         transform: rotate(0deg); 
+        }
+    100% {
+         transform: rotate(360deg); 
+        }
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-40px, 40px); }
+    50% { transform: translate(40px, -40px); }
+    75% { transform: translate(-40px, -40px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .popup1{
+    top: 70%;
+    left: 20%;
+  }
+  .popup2{
+    top: 10%;
+    left: 70%;
+  }
+  .popup3{
+    top: 10%;
+    left: 10%;
+  }
+  .popup4{
+    top: 80%;
+    left: 80%;
+  }
+
+  .under-construction {
+    width: 100%;
+    bottom: 0;
+    background: yellow;
+    border: 3px solid red;
+    padding: 10px;
+    font-weight: bold;
+    color: red;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .under-construction:hover {
+    background: red;
+    color: yellow;
+    animation: bounce 0.5s linear infinite;
+    animation: scale 0.5s linear infinite;
+  }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-100px); }
+        60% { transform: translateY(-200px); }
+    }
